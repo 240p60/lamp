@@ -1,7 +1,11 @@
+import React from 'react';
+import { Lamp } from './components';
+import "./index.scss";
+
 function App() {
   return (
     <div className="App">
-      <h1>Lamp</h1>
+      <Lamp active />
     </div>
   );
 }
