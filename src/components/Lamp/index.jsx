@@ -18,7 +18,7 @@ const LampActive = styled.img`
   width: 100%;
   position: absolute;
   opacity: ${({value}) => value / 100};
-  animation: glow 3s linear infinite;
+  transition: .2s linear;
 `;
 
 const LampDisabled = styled.img`
