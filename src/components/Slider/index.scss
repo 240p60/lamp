@@ -1,0 +1,36 @@
+.ant-slider {
+  &:after {
+    content: 'Intensity';
+    position: absolute;
+    right: -115px;
+    top: 50%;
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: -20px;
+    color: #fff;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+  }
+
+  &-track {
+    background-color: #fcff35;
+  }
+
+  &:hover &-track {
+    background-color: #ff8628;
+  }
+
+  &:hover &-handle {
+    &.ant-tooltip-open {
+      border-color: #ff8628 !important;
+    }
+  }
+
+  &-handle {
+    border-color: #fcff35 !important;
+
+    &.ant-tooltip-open {
+      border-color: #ff8628 !important;
+    }
+  }
+}

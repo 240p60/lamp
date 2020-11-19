@@ -1,24 +1,31 @@
 import React from 'react';
-import "./index.scss";
+import LampOff from './bulb-off.png';
+import LampOn from './bulb-on.png';
 import styled from 'styled-components';
 
-const Lamp = ({active}) => {
+const Lamp = ({ active, value }) => {
   return (
-    <div className="lamp">
-      <div className="lamp_line"></div>
-      <LampCircle active={active} className="lamp_circle">
-        <div className="arrow arrow_1"></div>
-        <div className="arrow arrow_2"></div>
-        <div className="arrow arrow_3"></div>
-        <div className="arrow arrow_4"></div>
-        <div className="arrow arrow_5"></div>
-      </LampCircle>
-    </div>
+    <>
+      <LampDisabled id="bulb-off" alt="bulb-off" src={LampOff} />
+      {active && <LampActive value={value} alt="bulb-on" src={LampOn} /> }
+    </>
   );
 }
 
-const LampCircle = styled.div`
-  background-color: ${({active}) => active ? 'yellow' : 'transparent'};
+const LampActive = styled.img`
+  margin-top: -50px;
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  opacity: ${({value}) => value / 100};
+  animation: glow 3s linear infinite;
+`;
+
+const LampDisabled = styled.img`
+  margin-top: -50px;
+  height: 450px;
+  width: 100%;
+  position: absolute;
 `;
 
 export default Lamp;

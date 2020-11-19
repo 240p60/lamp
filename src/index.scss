@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #111 !important;
 }
 
 code {
@@ -13,10 +18,45 @@ code {
 }
 
 .App {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
+  width: 450px;
+  height: 500px;
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+}
+
+.btn {
+  &.active {
+    span {
+      background: #ffffff;
+      color: #111;
+    }
+  }
+
+  &.disabled {
+    span {
+      background: #111;
+      color: #fff;
+    }
+  }
+
+  span {
+    height: 50px;
+    width: 180px;
+    display: block;
+    text-align: center;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
 }
