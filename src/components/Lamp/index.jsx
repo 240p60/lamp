@@ -3,11 +3,11 @@ import LampOff from './bulb-off.png';
 import LampOn from './bulb-on.png';
 import styled from 'styled-components';
 
-const Lamp = ({ active, value }) => {
+const Lamp = ({ active, intenseValue, warmthValue }) => {
   return (
     <>
       <LampDisabled id="bulb-off" alt="bulb-off" src={LampOff} />
-      {active && <LampActive value={value} alt="bulb-on" src={LampOn} /> }
+      {active && <LampActive warmthValue={warmthValue} intenseValue={intenseValue} alt="bulb-on" src={LampOn} /> }
     </>
   );
 }
@@ -17,8 +17,10 @@ const LampActive = styled.img`
   height: 450px;
   width: 100%;
   position: absolute;
-  opacity: ${({value}) => value / 100};
+  opacity: ${({intenseValue}) => intenseValue / 100};
   transition: .2s linear;
+  -webkit-filter: ${({warmthValue}) => `saturate(${warmthValue})`};
+  filter: ${({warmthValue}) => `saturate(${warmthValue})`};
 `;
 
 const LampDisabled = styled.img`

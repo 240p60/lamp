@@ -1,17 +1,4 @@
 .ant-slider {
-  &:after {
-    content: 'Intensity';
-    position: absolute;
-    right: -115px;
-    top: 50%;
-    font-size: 36px;
-    line-height: 40px;
-    margin-top: -20px;
-    color: #fff;
-    text-transform: uppercase;
-    transform: rotate(90deg);
-  }
-
   &-track {
     background-color: #fcff35;
   }
