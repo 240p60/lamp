@@ -1,6 +1,6 @@
 # Web Lamp :)
 
-![Alt text](lamp.gif) / ![](lamp.gif)
+![Alt text](lamp.gif)
 
 ## Available Scripts
 
