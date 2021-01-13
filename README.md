@@ -1,5 +1,7 @@
 # Web Lamp :)
 
+![Alt text](lamp.gif) / ![](lamp.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
