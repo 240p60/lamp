@@ -1,4 +1,4 @@
-# Web Lamp :)
+# Web Lamp
 
 Just some tricky CSS
 
