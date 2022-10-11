@@ -1,5 +1,5 @@
 # Web Lamp :)
 
-![Alt text](lamp.gif)
+Just some tricky CSS
 
-## Проект "по приколу" для лабороторной работы 🌚
+![Alt text](lamp.gif)
